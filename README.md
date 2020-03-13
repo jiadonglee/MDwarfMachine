@@ -9,7 +9,7 @@ MDM does not need to install locally, but it requires to download models pre-tra
 
 ### Author
 
-Jiadong LI (jdli@nao.cas.cn) 
+Jiadong Li (jdli@nao.cas.cn)   
 Chao Liu (NAOC)   
 Bo Zhang (NAOC)
 
