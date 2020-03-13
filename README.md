@@ -5,7 +5,7 @@ Created by jdli@nao.cas.cn, Fri. Mar. 13 2020.
 
 ## Getting Started
 
-MDM does not need to install locally, but it requires to download models pre trained by SLAM (https://github.com/hypergravity/astroslam) . There are 2 models trained by BT-Settl synthetic spectra and ASPCAP labels respectively.  Users can get models on https://drive.google.com/open?id=1RRrVS9QsLBweDK-OBW2KfPkn5CevQRjC named `bt_settl.dump` and `aspcap.dump`.
+MDM does not need to install locally, but it requires to download models pre-trained by SLAM (https://github.com/hypergravity/astroslam) . There are two models trained by BT-Settl synthetic spectra and ASPCAP labels respectively.  Users can download trained models on https://drive.google.com/open?id=1RRrVS9QsLBweDK-OBW2KfPkn5CevQRjC named `bt_settl.dump` and `aspcap.dump`.
 
 ### Author
 
