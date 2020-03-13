@@ -31,7 +31,7 @@ Libraries you need to install the software.
 
 * emcee
 
-* slam (`pip install astroslam` or `pip install git+git://github.com/hypergravity/astrosla`)
+* slam (`pip install astroslam` or `pip install git+git://github.com/hypergravity/astroslam`)
 
   [https://github.com/hypergravity/astroslam]
 
