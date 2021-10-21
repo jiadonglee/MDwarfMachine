@@ -24,10 +24,9 @@ def readFits(filename):
 def resample(wave, flux, err, wave_resamp):
 
     f1 = interp1d(wave, flux, kind='cubic')
-    f2 = interp1d(wave, err)
+    f2 = interp1d(wave, err,  kind='cubic')
     re_flux = f1(wave_resamp)
     re_err = f2(wave_resamp)
-        
     return np.array(re_flux), np.array(re_err)
 
 class LAMOST():
@@ -36,7 +35,6 @@ class LAMOST():
         self.root_dir = root_dir
         self.wave_resamp = wave_resamp
         self.spec_names = os.listdir(root_dir)
-        # remove hidden file of MacOS
         self.spec_names = [f for f in os.listdir(root_dir) if not f.startswith('.')]
         self.spec_names.sort()
         
