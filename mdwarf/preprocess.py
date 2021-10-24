@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import os
+import os, glob
 import numpy as np
 from astropy.io import fits
 from scipy.interpolate import interp1d
@@ -12,14 +12,14 @@ def readFits(filename):
     hdulist = fits.open(filename)
     head = hdulist[0].header
     scidata = hdulist[0].data
-    # obsid = head['OBSID']
+    obsid = head['OBSID']
     flux = scidata[0,]
     invar = scidata[1,]
 
     wavelength = scidata[2,]
     hdulist.close()
 
-    return (wavelength, flux, invar)
+    return (wavelength, flux, invar, obsid)
 
 def resample(wave, flux, err, wave_resamp):
 
@@ -34,8 +34,9 @@ class LAMOST():
     def __init__(self, root_dir, wave_resamp):
         self.root_dir = root_dir
         self.wave_resamp = wave_resamp
-        self.spec_names = os.listdir(root_dir)
-        self.spec_names = [f for f in os.listdir(root_dir) if not f.startswith('.')]
+#         self.spec_names = os.listdir(root_dir)
+#         self.spec_names = [f for f in os.listdir(root_dir) if not f.startswith('.')]
+        self.spec_names = glob.glob(root_dir+"/spec*fits.gz")
         self.spec_names.sort()
         
     def __len__(self):
@@ -43,12 +44,13 @@ class LAMOST():
         return length
 
     def __getitem__(self, idx):
-        spec_name = os.path.join(self.root_dir, self.spec_names[idx])
-        self.wave, self.flux, self.invar = readFits(spec_name)
-        self.re_flux, self.re_invar = resample(self.wave, self.flux, self.invar, self.wave_resamp)
+#         spec_name = os.path.join(self.root_dir, self.spec_names[idx])
+        spec_name = self.spec_names[idx]
+        wave, flux, invar, obsid = readFits(spec_name)
+        re_flux, re_invar = resample(wave, flux, invar, self.wave_resamp)
 
-        return {'wave':self.wave, 'flux':self.flux, 'invar':self.invar, \
-                'flux_resamp':self.re_flux, 'invar_resamp':self.re_invar}
+        return {'obsid':obsid, 'wave':wave, 'flux':flux, 'invar':invar, \
+                'flux_resamp':re_flux, 'invar_resamp':re_invar}
 
 if __name__ == "__main__":
     pass
