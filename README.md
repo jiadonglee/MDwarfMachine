@@ -1,4 +1,4 @@
-# MDwarfMachine (MDM)
+# M Dwarf Machine (MDM)
 STELLAR PARAMETRIZATION OF LAMOST M DWARF STARS
 
 Created by jdli@nao.cas.cn, Fri. Mar. 13 2020.
