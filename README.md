@@ -33,14 +33,17 @@ Libraries you need to install the software.
 
 * emcee
 
-* slam (`pip install astroslam` or `pip install git+git://github.com/hypergravity/astroslam`)
+* slam (`pip install astroslam` or `pip install git+git://github.com/hypergravity/astroslam`)[https://github.com/hypergravity/astroslam]  
 
-  [https://github.com/hypergravity/astroslam]
+* laspec (`pip install -U laspec` or `pip install -U git+git://github.com/hypergravity/laspec`)[https://github.com/hypergravity/laspec]
+
+  
 
 
 ## Running the tests
 
-See on mdwarf/tutorial.ipynb
+See on mdwarf/tutorial.ipynb  
+About radial velocity measurements, see mdwarf/rv.ipynb (need `laspec`)
 
 ## How to cite
 ```
