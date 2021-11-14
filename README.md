@@ -46,7 +46,7 @@ Libraries you need to install the software.
 
 ## Running the tests
 
-See on mdwarf/tutorial.ipynb  
+See on tutorial.ipynb  
 About radial velocity measurements, see mdwarf/rv.ipynb (need `laspec`)
 
 ## How to cite
