@@ -5,7 +5,11 @@ Created by jdli@nao.cas.cn, Fri. Mar. 13 2020.
 
 ## Getting Started
 
-MDM does not need to install locally, but it requires download models pre-trained by SLAM (https://github.com/hypergravity/astroslam). The trained model of MDM is on the basis of stellar parameters of APOGEE DR16. Users can download trained models on [ASPCAP_DR16.dump](http://vospace.china-vo.org/vospace/sharefile?Ravu36E%2F2jYZNzt02j3veAZPh4BY%2FLyrotXvCXHpya0%2F7YjJhP7oZ9jpqI1rP82tUzcIXRICrD0e%0ATDKhXgjkcQ%3D%3D). For more details, see ["Stellar Parameterization of LAMOST M Dwarf Stars"](https://iopscience.iop.org/article/10.3847/1538-4365/abe1c1) 
+MDM does not need to install locally, but it requires download models pre-trained by SLAM (https://github.com/hypergravity/astroslam). The trained model of MDM is on the basis of stellar parameters of APOGEE DR16. Users can download trained models on [ASPCAP_DR16.dump](http://vospace.china-vo.org/vospace/sharefile?Ravu36E%2F2jYZNzt02j3veAZPh4BY%2FLyrotXvCXHpya0%2F7YjJhP7oZ9jpqI1rP82tUzcIXRICrD0e%0ATDKhXgjkcQ%3D%3D). For more details, see ["Stellar Parameterization of LAMOST M Dwarf Stars"](https://iopscience.iop.org/article/10.3847/1538-4365/abe1c1)  
+
+###
+Version 0.2.0  
+Add Mgiant module: The trained model of LAMOST M giant stars is on [ASPCAP_DR16_mgiant.dump](http://paperdata.china-vo.org/jordan/Mdwarf/ASPCAP_DR16_mgiant.dump). 
 
 ### Author
 
