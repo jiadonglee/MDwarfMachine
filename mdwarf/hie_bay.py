@@ -120,7 +120,7 @@ def bay_pwlaw(nu, mass, ZZ, mass_err, SAMPLE_SIZE=3000, TUNE_SIZE=3000, TAR_ACCP
         lg_nu_obs = pm.Normal(
             "lg_nu_obs", 
             mu=C - ZZ/(tt.pow(10,lghz)*tt.log(10)) - lghz - alpha*lgmtot,
-            sigma=tt.sqrt(lg_nu_err**2+m_tot_err**2/mtot**2), 
+            sigma=tt.sqrt(lg_nu_err**2), 
             observed=lgnu
         )
 
